@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1117; /* Dark background */
+    color: #c9d1d9; /* Light text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    direction: rtl; /* Right-to-left for Arabic */
+    text-align: right;
+}
+
+.container {
+    background-color: #161b22; /* Slightly lighter dark container */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #58a6ff; /* Blue header */
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #8b949e;
+    margin-bottom: 25px;
+    font-size: 1em;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px dashed #30363d;
+    border-radius: 8px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    cursor: pointer;
+}
+
+#uploadButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #238636; /* GitHub green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+#uploadButton:hover:not(:disabled) {
+    background-color: #2ea043;
+}
+
+#uploadButton:disabled {
+    background-color: #30363d;
+    cursor: not-allowed;
+}
+
+.status {
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.status.loading {
+    background-color: #24292f;
+    color: #58a6ff;
+}
+
+.status.success {
+    background-color: #23863620;
+    color: #238636;
+}
+
+.status.error {
+    background-color: #da363320;
+    color: #da3633;
+}
+
+#progressBarContainer {
+    width: 100%;
+    background-color: #30363d;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background-color: #58a6ff;
+    transition: width 0.4s ease;
+}
+
+#downloadLinkContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#downloadLink {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: 1px solid #58a6ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#downloadLink:hover {
+    background-color: #58a6ff;
+    color: #0d1117;
+}
